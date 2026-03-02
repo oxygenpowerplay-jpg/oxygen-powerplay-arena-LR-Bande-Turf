@@ -4,673 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oxygen Powerplay Arena | 24/7 Sports Turf Bengaluru</title>
-    
-    <!-- Meta Tags for SEO -->
-    <meta name="description" content="Oxygen Powerplay Arena is Bengaluru's premier 24/7 sports destination in Kaval Bairasandra. Experience high-octane 7-a-side Football and Cricket on professional-grade FIFA-standard turf. Featuring floodlights, premium amenities, and exclusive 2026 season offers.">
-    
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <script src="[https://cdn.tailwindcss.com](https://cdn.tailwindcss.com)"></script>
+    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css)">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap');
-        
-        :root {
-            --primary-oxygen: #00ff88;
-            --deep-space: #0a0e14;
-            --warning-red: #ff3366;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--deep-space);
-            color: white;
-            scroll-behavior: smooth;
-            overflow-x: hidden;
-        }
-
-        .oxygen-text {
-            color: var(--primary-oxygen);
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        .bg-oxygen { background-color: var(--primary-oxygen); }
-
-        .hero-gradient {
-            background: linear-gradient(rgba(10, 14, 20, 0.8), rgba(10, 14, 20, 0.98)), 
-                        url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-
-        .glass-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .glass-card:hover {
-            border-color: var(--primary-oxygen);
-            transform: translateY(-5px);
-        }
-
-        .ticker-wrap {
-            width: 100%;
-            overflow: hidden;
-            background: var(--primary-oxygen);
-            color: black;
-            font-weight: 800;
-            padding: 8px 0;
-            font-size: 11px;
-            text-transform: uppercase;
-        }
-
-        .ticker-move {
-            display: inline-block;
-            white-space: nowrap;
-            animation: ticker 35s linear infinite;
-        }
-
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        .form-input {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 14px;
-            border-radius: 12px;
-            width: 100%;
-            outline: none;
-            transition: all 0.3s;
-        }
-
-        .form-input:focus {
-            border-color: var(--primary-oxygen);
-            box-shadow: 0 0 15px rgba(0, 255, 136, 0.2);
-        }
-
-        #admin-panel {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.98);
-            z-index: 1000;
-            overflow-y: auto;
-            padding: 1.5rem;
-        }
-        
-        .loyalty-badge {
-            background: gold;
-            color: black;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 10px;
-            font-weight: bold;
-        }
-
-        .metric-card {
-            background: rgba(255,255,255,0.05);
-            border-left: 4px solid var(--primary-oxygen);
-            padding: 1.5rem;
-            border-radius: 1rem;
-        }
-
-        .btn-glow:hover {
-            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
-        }
-
-        .offer-pill {
-            background: linear-gradient(90deg, #ff3366, #ff0055);
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { opacity: 0.8; }
-            50% { opacity: 1; }
-            100% { opacity: 0.8; }
-        }
-
-        .strikethrough { text-decoration: line-through; opacity: 0.5; }
-
-        /* Custom scrollbar for admin panel */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: transparent; }
-        ::-webkit-scrollbar-thumb { background: rgba(0, 255, 136, 0.3); border-radius: 10px; }
+        @import url('[https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap)');
+        :root { --primary-oxygen: #00ff88; --deep-space: #0a0e14; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--deep-space); color: white; }
+        .oxygen-text { color: var(--primary-oxygen); font-family: 'Orbitron', sans-serif; }
+        .hero-gradient { background: linear-gradient(rgba(10,14,20,0.8), rgba(10,14,20,0.98)), url('[https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80](https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80)'); background-size: cover; }
+        .glass-card { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 2rem; }
+        .form-input { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 12px; border-radius: 10px; width: 100%; outline: none; }
+        .form-input:focus { border-color: var(--primary-oxygen); }
+        #admin-panel { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.98); z-index: 1000; overflow-y: auto; padding: 2rem; }
     </style>
 </head>
-<body class="antialiased">
+<body>
 
-    <!-- Admin Panel (Dashboard) -->
     <div id="admin-panel">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-center mb-8 border-b border-white/10 pb-4">
-                <div>
-                    <h2 class="text-3xl font-black italic oxygen-text uppercase leading-none">ANALYTICS ENGINE</h2>
-                    <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Real-time Performance & Loyalty Report</p>
-                </div>
-                <button onclick="document.getElementById('admin-panel').style.display='none'" class="bg-white/10 hover:bg-white/20 p-3 rounded-full h-12 w-12 flex items-center justify-center transition-colors">
-                    <i class="fas fa-times"></i>
-                </button>
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-2xl font-black oxygen-text">BOOKING LOGS</h2>
+                <button onclick="document.getElementById('admin-panel').style.display='none'" class="text-white text-2xl">&times;</button>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-                <div class="metric-card">
-                    <p class="text-[10px] text-gray-400 uppercase tracking-widest">Est. Revenue</p>
-                    <h3 id="stat-revenue" class="text-3xl font-black text-oxygen">₹0</h3>
-                    <p class="text-[9px] text-gray-500 mt-2 italic">Based on booking rates</p>
-                </div>
-                <div class="metric-card">
-                    <p class="text-[10px] text-gray-400 uppercase tracking-widest">Total Enquiries</p>
-                    <h3 id="stat-total" class="text-3xl font-black">0</h3>
-                    <p class="text-[9px] text-gray-500 mt-2 italic">All-time data</p>
-                </div>
-                <div class="metric-card">
-                    <p class="text-[10px] text-gray-400 uppercase tracking-widest">Loyalty Rate</p>
-                    <h3 id="stat-loyalty" class="text-3xl font-black">0%</h3>
-                    <p class="text-[9px] text-gray-500 mt-2 italic">Repeat players</p>
-                </div>
-                <div class="metric-card">
-                    <p class="text-[10px] text-gray-400 uppercase tracking-widest">Top Slot</p>
-                    <h3 id="stat-peak" class="text-xl font-black uppercase">N/A</h3>
-                    <p class="text-[9px] text-gray-500 mt-2 italic">Most popular hour</p>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div class="lg:col-span-2 glass-card rounded-2xl overflow-hidden">
-                    <div class="p-4 border-b border-white/5 flex justify-between items-center bg-white/5">
-                        <span class="text-xs font-bold uppercase tracking-widest text-oxygen">Recent Logs</span>
-                        <button id="exportCsvBtn" class="bg-oxygen text-black text-[10px] font-black px-4 py-2 rounded-lg hover:opacity-80 transition-opacity">
-                            <i class="fas fa-download mr-2"></i> EXCEL EXPORT
-                        </button>
-                    </div>
-                    <div class="max-h-[500px] overflow-y-auto">
-                        <table class="w-full text-left text-[11px] uppercase">
-                            <thead class="bg-black text-gray-400 sticky top-0 z-10">
-                                <tr>
-                                    <th class="p-4">Date</th>
-                                    <th class="p-4">Slot</th>
-                                    <th class="p-4">Captain</th>
-                                    <th class="p-4">Phone</th>
-                                    <th class="p-4">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody id="admin-table-body" class="divide-y divide-white/5">
-                                <!-- Data injected via JS -->
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="space-y-6">
-                    <div class="glass-card p-6 rounded-2xl">
-                        <h4 class="text-xs font-bold text-oxygen uppercase mb-4 tracking-tighter">Top Performers</h4>
-                        <div id="top-players-list" class="space-y-4 text-[10px]"></div>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl">
-                        <h4 class="text-xs font-bold text-gray-400 uppercase mb-4 tracking-tighter">Demand Analysis</h4>
-                        <div id="slot-popularity-list" class="space-y-3"></div>
-                    </div>
-                </div>
+            <div class="glass-card overflow-hidden">
+                <table class="w-full text-left text-xs">
+                    <thead class="bg-white/10 uppercase">
+                        <tr>
+                            <th class="p-4">Date</th>
+                            <th class="p-4">Slot</th>
+                            <th class="p-4">Captain</th>
+                            <th class="p-4">Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-table-body" class="divide-y divide-white/5"></tbody>
+                </table>
             </div>
         </div>
     </div>
 
-    <!-- Announcement Ticker -->
-    <div class="ticker-wrap fixed top-0 z-50">
-        <div class="ticker-move">
-            CONTACT: 8618038563 • 8310885207 • 6360367717 • MON-FRI: ₹899 • SAT-SUN: ₹1000 • NIGHT: ₹1200 • 24/7 OPEN • KAVAL BAIRASANDRA, BENGALURU 560032 •
-        </div>
-    </div>
-
-    <!-- Navigation -->
-    <nav class="flex flex-col md:flex-row justify-between items-center p-6 mt-10 relative z-40 max-w-7xl mx-auto gap-4">
-        <div class="text-xl md:text-2xl font-bold oxygen-text tracking-tighter">OXYGEN</div>
-        <div class="flex flex-wrap justify-center gap-2">
-            <a href="tel:+918618038563" class="bg-oxygen text-black px-4 py-2 rounded-full font-black text-[10px] flex items-center hover:scale-105 transition-transform btn-glow">
-                <i class="fas fa-phone mr-1 text-xs"></i> 8618038563
-            </a>
-            <a href="tel:+918310885207" class="bg-oxygen text-black px-4 py-2 rounded-full font-black text-[10px] flex items-center hover:scale-105 transition-transform btn-glow">
-                <i class="fas fa-phone mr-1 text-xs"></i> 8310885207
-            </a>
-            <a href="tel:+916360367717" class="bg-oxygen text-black px-4 py-2 rounded-full font-black text-[10px] flex items-center hover:scale-105 transition-transform btn-glow">
-                <i class="fas fa-phone mr-1 text-xs"></i> 6360367717
-            </a>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero-gradient min-h-[50vh] flex flex-col items-center justify-center text-center px-4 relative">
-        <div class="mb-4">
-             <span class="offer-pill text-[10px] font-black px-4 py-1 rounded-full uppercase tracking-tighter shadow-lg shadow-pink-500/20">2026 Season: Free Refreshment for Morning Slots</span>
-        </div>
-        <h1 class="text-6xl md:text-9xl font-black mb-4 tracking-tighter uppercase italic leading-[0.8]">
-            POWERPLAY <br><span class="oxygen-text">ARENA</span>
-        </h1>
-        <p class="text-oxygen font-black text-[11px] uppercase tracking-[0.3em] mb-8">
-            5th Floor, Nanda Gokula Layout, Shampura Main Rd, Bengaluru 560032
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="https://maps.app.goo.gl/354vU6Lz6vT8oT8s8" target="_blank" class="bg-white/10 hover:bg-white/20 text-white border border-white/20 px-8 py-4 rounded-full font-bold text-xs uppercase flex items-center transition-all group">
-                <i class="fas fa-map-marker-alt mr-2 text-oxygen group-hover:scale-125 transition-transform"></i> Get Directions
-            </a>
-            <a href="#rules" class="bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 rounded-full font-bold text-xs uppercase flex items-center transition-all">
-                Rules & Policy
-            </a>
-        </div>
+    <header class="hero-gradient min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
+        <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter uppercase italic">OXYGEN <span class="oxygen-text">ARENA</span></h1>
+        <p class="text-gray-400 text-sm uppercase tracking-widest mb-8">Kaval Bairasandra, Bengaluru | 24/7 Open</p>
+        <a href="#booking" class="bg-[#00ff88] text-black px-10 py-4 rounded-full font-black uppercase text-xs">Book Slot Now</a>
     </header>
 
-    <!-- About Section / Detailed Description -->
-    <section class="py-16 px-6 max-w-4xl mx-auto text-center border-b border-white/5">
-        <h2 class="text-3xl font-black italic oxygen-text uppercase mb-6">Bengaluru's Premier 24/7 Sports Destination</h2>
-        <p class="text-sm text-gray-400 leading-relaxed uppercase tracking-wider mb-8">
-            Oxygen Powerplay Arena is a high-octane 7-a-side sports hub located in Kaval Bairasandra, Shampura. Engineered for the 2026 sports season, we provide a professional-grade FIFA-standard turf environment for both Football enthusiasts and Cricket teams. Whether it's a sunrise match or a late-night showdown, our arena is equipped with premium floodlights and amenities to ensure a top-tier playing experience round the clock.
-        </p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
-                <i class="fas fa-bolt text-oxygen mb-2"></i>
-                <p class="text-[9px] font-bold uppercase">24/7 Access</p>
-            </div>
-            <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
-                <i class="fas fa-futbol text-oxygen mb-2"></i>
-                <p class="text-[9px] font-bold uppercase">7-A-Side Pro</p>
-            </div>
-            <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
-                <i class="fas fa-lightbulb text-oxygen mb-2"></i>
-                <p class="text-[9px] font-bold uppercase">Floodlights</p>
-            </div>
-            <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
-                <i class="fas fa-parking text-oxygen mb-2"></i>
-                <p class="text-[9px] font-bold uppercase">Free Parking</p>
-            </div>
+    <section id="booking" class="py-20 px-6">
+        <div class="max-w-xl mx-auto glass-card p-8 md:p-12">
+            <h2 class="text-3xl font-black oxygen-text text-center mb-8 italic">RESERVE TURF</h2>
+            <form id="bookingForm" class="space-y-4">
+                <input type="text" id="captain_name" required class="form-input" placeholder="Team Captain Name">
+                <input type="tel" id="whatsapp_no" required class="form-input" placeholder="WhatsApp Number" pattern="[0-9]{10}">
+                <div class="grid grid-cols-2 gap-4">
+                    <input type="date" id="booking_date" required class="form-input">
+                    <select id="booking_time" required class="form-input">
+                        <option value="" disabled selected>Select Time</option>
+                        <option value="17:00">05:00 PM</option>
+                        <option value="18:00">06:00 PM</option>
+                        <option value="19:00">07:00 PM</option>
+                        <option value="20:00">08:00 PM</option>
+                        <option value="21:00">09:00 PM</option>
+                        <option value="22:00">10:00 PM</option>
+                    </select>
+                </div>
+                <button type="submit" id="submitBtn" class="w-full bg-[#00ff88] text-black font-black py-5 rounded-xl uppercase text-sm mt-4">Confirm via WhatsApp</button>
+            </form>
         </div>
     </section>
 
-    <!-- Offers Section -->
-    <section class="py-16 px-6 max-w-7xl mx-auto">
-        <h3 class="text-center oxygen-text text-xl font-black mb-10 uppercase italic tracking-widest">Active Discounts</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="glass-card p-8 rounded-3xl border-l-4 border-oxygen">
-                <span class="text-[10px] text-oxygen font-bold uppercase tracking-widest">Early Bird</span>
-                <h4 class="text-2xl font-black mt-2 uppercase italic">6 AM - 8 AM</h4>
-                <p class="text-xs text-gray-500 mt-3 mb-6">Start your day with intensity. Free team refreshments included with every morning booking.</p>
-                <div class="text-2xl font-black italic">₹899 <span class="text-[10px] font-normal text-gray-600">/ HOUR</span></div>
-            </div>
-            <div class="glass-card p-8 rounded-3xl border-l-4 border-pink-500">
-                <span class="text-[10px] text-pink-500 font-bold uppercase tracking-widest">Night Owl</span>
-                <h4 class="text-2xl font-black mt-2 uppercase italic">2 Hour Combo</h4>
-                <p class="text-xs text-gray-500 mt-3 mb-6">Book any 2 consecutive hours after 11:00 PM and save ₹200 on your total bill.</p>
-                <div class="flex items-center gap-3">
-                    <span class="text-lg font-bold italic strikethrough text-gray-600">₹2400</span>
-                    <span class="text-2xl font-black italic text-pink-500">₹2200</span>
-                </div>
-            </div>
-            <div class="glass-card p-8 rounded-3xl border-l-4 border-yellow-500">
-                <span class="text-[10px] text-yellow-500 font-bold uppercase tracking-widest">Loyalty</span>
-                <h4 class="text-2xl font-black mt-2 uppercase italic">Play 10, Get 1</h4>
-                <p class="text-xs text-gray-500 mt-3 mb-6">The ultimate reward for our regulars. Complete 10 bookings and get your 11th game free.</p>
-                <div class="text-xl font-black italic text-yellow-500 uppercase">11th Game Free</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Booking Engine -->
-    <section id="booking" class="py-16 px-6">
-        <div class="max-w-4xl mx-auto">
-            <div class="glass-card p-10 rounded-[2.5rem] relative overflow-hidden">
-                <div class="absolute top-0 right-0 p-8 opacity-5 text-9xl italic font-black">2026</div>
-                <div class="mb-10 text-center">
-                    <h2 class="text-4xl font-black uppercase italic oxygen-text tracking-tighter">SECURE YOUR SLOT</h2>
-                    <p class="text-[10px] text-gray-500 uppercase mt-3 tracking-[0.3em]">Instant availability check & confirmation</p>
-                </div>
-                
-                <form id="bookingForm" class="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
-                    <div class="md:col-span-2">
-                        <input type="text" id="captain_name" required class="form-input" placeholder="Captain / Team Name">
-                    </div>
-                    <div class="md:col-span-2">
-                        <input type="tel" id="whatsapp_no" required class="form-input" placeholder="WhatsApp Number (10 Digits)" pattern="[0-9]{10}">
-                    </div>
-                    <div>
-                        <label class="text-[10px] uppercase font-bold text-gray-500 mb-2 block">Play Date</label>
-                        <input type="date" id="booking_date" required class="form-input">
-                    </div>
-                    <div>
-                        <label class="text-[10px] uppercase font-bold text-gray-500 mb-2 block">Select Slot</label>
-                        <select id="booking_time" required class="form-input">
-                            <option value="" disabled selected>Choose Time</option>
-                            <optgroup label="Peak Hours">
-                                <option value="17:00">05:00 PM - 06:00 PM</option>
-                                <option value="18:00">06:00 PM - 07:00 PM</option>
-                                <option value="19:00">07:00 PM - 08:00 PM</option>
-                                <option value="20:00">08:00 PM - 09:00 PM</option>
-                                <option value="21:00">09:00 PM - 10:00 PM</option>
-                                <option value="22:00">10:00 PM - 11:00 PM</option>
-                            </optgroup>
-                            <optgroup label="Late Night (Strict Policy)">
-                                <option value="23:00">11:00 PM - 12:00 AM</option>
-                                <option value="00:00">12:00 AM - 01:00 AM</option>
-                                <option value="01:00">01:00 AM - 02:00 AM</option>
-                                <option value="02:00">02:00 AM - 03:00 AM</option>
-                            </optgroup>
-                            <optgroup label="Morning">
-                                <option value="06:00">06:00 AM - 07:00 AM</option>
-                                <option value="07:00">07:00 AM - 08:00 AM</option>
-                            </optgroup>
-                        </select>
-                    </div>
-
-                    <div class="md:col-span-2 text-center py-8 bg-white/5 rounded-3xl border border-white/5 mt-4">
-                        <p class="text-[10px] text-gray-500 uppercase tracking-widest mb-1">Estimated Slot Rate</p>
-                        <div id="estimated-price" class="text-6xl font-black text-oxygen">₹---</div>
-                    </div>
-
-                    <button type="submit" id="submitBtn" class="md:col-span-2 w-full bg-oxygen text-black font-black py-6 rounded-2xl text-sm uppercase hover:bg-white hover:scale-[1.02] transition-all btn-glow">
-                        CONFIRM ON WHATSAPP
-                    </button>
-                    
-                    <p class="md:col-span-2 text-[9px] text-center text-gray-500 uppercase tracking-widest mt-4">
-                        Trouble booking? Call: 8618038563 | 8310885207 | 6360367717
-                    </p>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Rules & Policy Section -->
-    <section id="rules" class="py-20 px-6 bg-white/[0.01]">
-        <div class="max-w-7xl mx-auto">
-            <h2 class="text-4xl font-black uppercase italic oxygen-text mb-16 text-center tracking-tighter">RULES & CONDUCT</h2>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="space-y-8">
-                    <div class="flex items-start gap-5">
-                        <div class="bg-oxygen/10 p-4 rounded-2xl text-oxygen"><i class="fas fa-shoe-prints text-xl"></i></div>
-                        <div>
-                            <h4 class="font-black text-base uppercase italic">Footwear Policy</h4>
-                            <p class="text-xs text-gray-500 leading-relaxed mt-2 uppercase tracking-wide">Only flat-soled or turf shoes allowed. NO spikes or metal studs. Violators will not be allowed on the turf.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-5">
-                        <div class="bg-oxygen/10 p-4 rounded-2xl text-oxygen"><i class="fas fa-smoking-ban text-xl"></i></div>
-                        <div>
-                            <h4 class="font-black text-base uppercase italic">Zero Tolerance</h4>
-                            <p class="text-xs text-gray-500 leading-relaxed mt-2 uppercase tracking-wide">Strictly no smoking, alcohol, or chewing tobacco inside the arena. 100% drug-free environment.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-5">
-                        <div class="bg-oxygen/10 p-4 rounded-2xl text-oxygen"><i class="fas fa-stopwatch text-xl"></i></div>
-                        <div>
-                            <h4 class="font-black text-base uppercase italic">Slot Discipline</h4>
-                            <p class="text-xs text-gray-500 leading-relaxed mt-2 uppercase tracking-wide">Your time starts as per the booking. No extensions for late arrivals. Vacate the turf immediately when the whistle blows.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Late Night Policy Block -->
-                <div class="bg-red-600/5 border-2 border-red-600/20 p-10 rounded-[2.5rem] relative overflow-hidden">
-                    <div class="absolute -right-8 -top-8 opacity-10 text-[150px] rotate-12"><i class="fas fa-volume-mute"></i></div>
-                    <h4 class="text-red-500 font-black text-2xl uppercase italic mb-6 tracking-tighter flex items-center gap-3">
-                        <i class="fas fa-exclamation-circle"></i> STRICT NIGHT RULES
-                    </h4>
-                    <p class="text-[10px] text-red-400 font-bold uppercase mb-6 tracking-widest">Effective for all slots after 11:00 PM</p>
-                    <ul class="space-y-5 text-xs font-black uppercase tracking-tight text-gray-300">
-                        <li class="flex items-center gap-4"><i class="fas fa-check-circle text-red-600"></i> ABSOLUTE SILENCE IN THE PARKING & STAIRS</li>
-                        <li class="flex items-center gap-4"><i class="fas fa-check-circle text-red-600"></i> NO SHOUTING OR ABUSIVE LANGUAGE</li>
-                        <li class="flex items-center gap-4"><i class="fas fa-check-circle text-red-600"></i> NO SPECTATORS OR LARGE CROWDS</li>
-                        <li class="flex items-center gap-4"><i class="fas fa-check-circle text-red-600"></i> LIGHTS WILL BE CUT OFF IMMEDIATELY IF NOISE PERSISTS</li>
-                        <li class="flex items-center gap-4"><i class="fas fa-check-circle text-red-600"></i> ID PROOF MANDATORY UPON REQUEST</li>
-                    </ul>
-                    <div class="mt-8 pt-6 border-t border-red-600/20">
-                        <p class="text-[9px] text-gray-500 italic">We maintain a peaceful neighborhood. Please cooperate with the management to keep the arena open 24/7.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-16 border-t border-white/5 text-center px-6">
-        <div class="oxygen-text text-3xl font-black italic mb-8">OXYGEN</div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 max-w-4xl mx-auto gap-8 mb-12">
-            <div class="flex flex-col gap-2">
-                <span class="text-gray-600 text-[10px] uppercase font-bold tracking-widest">Office One</span>
-                <a href="tel:+918618038563" class="text-sm font-black hover:text-oxygen transition-colors italic">86180 38563</a>
-            </div>
-            <div class="flex flex-col gap-2">
-                <span class="text-gray-600 text-[10px] uppercase font-bold tracking-widest">Office Two</span>
-                <a href="tel:+918310885207" class="text-sm font-black hover:text-oxygen transition-colors italic">83108 85207</a>
-            </div>
-            <div class="flex flex-col gap-2">
-                <span class="text-gray-600 text-[10px] uppercase font-bold tracking-widest">Office Three</span>
-                <a href="tel:+916360367717" class="text-sm font-black hover:text-oxygen transition-colors italic">63603 67717</a>
-            </div>
-        </div>
-
-        <div class="mb-10">
-            <a href="https://maps.app.goo.gl/354vU6Lz6vT8oT8s8" target="_blank" class="text-xs text-gray-500 hover:text-white transition-all uppercase font-bold tracking-widest border border-white/10 px-6 py-3 rounded-full">
-                Locate us on Google Maps <i class="fas fa-external-link-alt ml-2 text-[10px]"></i>
-            </a>
-        </div>
-
-        <p class="text-[10px] text-gray-800 uppercase tracking-[0.6em] mb-4 italic">© 2026 Oxygen Powerplay Arena Bangalore</p>
-        <button onclick="document.getElementById('admin-panel').style.display='block'" class="text-[9px] text-gray-800 hover:text-oxygen transition-colors uppercase tracking-[0.3em]">System Admin Panel</button>
+    <footer class="py-10 text-center border-t border-white/5">
+        <button onclick="document.getElementById('admin-panel').style.display='block'" class="text-[10px] text-gray-700 uppercase tracking-widest hover:text-white">Admin Dashboard</button>
     </footer>
 
-    <!-- Firebase Logic -->
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, collection, addDoc, serverTimestamp, onSnapshot, query } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { initializeApp } from "[https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js](https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js)";
+        import { getAuth, signInAnonymously, onAuthStateChanged } from "[https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js](https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js)";
+        import { getFirestore, collection, addDoc, serverTimestamp, onSnapshot, query } from "[https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js](https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js)";
 
-        // Firebase Configuration Helper
-        const getFirebaseConfig = () => {
-            try {
-                return JSON.parse(__firebase_config);
-            } catch (e) {
-                // Fallback or warning if config is missing during local dev
-                console.warn("Firebase config missing. Ensure it is provided in the environment.");
-                return {};
-            }
+        const firebaseConfig = {
+            apiKey: "AIzaSyAkgqxMU-2duaDIZesbv26sWp4UzcAKNCI",
+            authDomain: "oxygen-arena-portal.firebaseapp.com",
+            projectId: "oxygen-arena-portal",
+            storageBucket: "oxygen-arena-portal.firebasestorage.app",
+            messagingSenderId: "602115838449",
+            appId: "1:602115838449:web:6528f5ea3df0a56444f450"
         };
 
-        const firebaseConfig = getFirebaseConfig();
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
         const db = getFirestore(app);
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'oxygen-powerplay-2026';
+        const appId = 'oxygen-powerplay-2026';
 
-        let leadsData = [];
-        let user = null;
-
-        const initAuth = async () => {
-            try {
-                if (typeof __initial_auth_token !== 'undefined' && __initial_auth_token) {
-                    await signInWithCustomToken(auth, __initial_auth_token);
-                } else {
-                    await signInAnonymously(auth);
-                }
-            } catch (err) {
-                console.error("Auth initialization failed:", err);
-            }
-        };
-
-        onAuthStateChanged(auth, (u) => {
-            user = u;
-            if (u) {
-                // Deployment Rule: Always ensure domain is whitelisted in Firebase Console
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
                 const leadsRef = collection(db, 'artifacts', appId, 'public', 'data', 'leads');
-                onSnapshot(query(leadsRef), (snapshot) => {
-                    leadsData = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-                    updateAnalytics();
-                    refreshSlotsUI();
-                }, (err) => {
-                    console.error("Firestore Error:", err);
+                onSnapshot(query(leadsRef), (snap) => {
+                    const tbody = document.getElementById('admin-table-body');
+                    if(!tbody) return;
+                    tbody.innerHTML = '';
+                    snap.docs.forEach(doc => {
+                        const d = doc.data();
+                        tbody.innerHTML += `<tr><td class="p-4">${d.date}</td><td class="p-4 text-[#00ff88]">${d.time}</td><td class="p-4">${d.captain}</td><td class="p-4">${d.phone}</td></tr>`;
+                    });
                 });
+            } else {
+                signInAnonymously(auth);
             }
         });
 
-        initAuth();
-
-        // UI Helpers
-        function refreshSlotsUI() {
-            const dateInput = document.getElementById('booking_date').value;
-            const timeSelect = document.getElementById('booking_time');
-            if (!timeSelect) return;
-            timeSelect.querySelectorAll('option').forEach(opt => {
-                const isBooked = leadsData.some(b => b.date === dateInput && b.time === opt.value);
-                opt.disabled = isBooked;
-                if(isBooked) opt.textContent = opt.textContent.includes(" (BOOKED)") ? opt.textContent : opt.textContent + " (BOOKED)";
-            });
-        }
-
-        function calculatePrice(dateStr, timeStr) {
-            if (!dateStr || !timeStr) return 0;
-            const hour = parseInt(timeStr.split(':')[0]);
-            const day = new Date(dateStr).getDay(); 
-            if (hour >= 23 || hour < 6) return 1200; // Late Night
-            if (day === 0 || day === 6) return 1000; // Weekend
-            return 899; // Standard Weekday
-        }
-
-        function updateAnalytics() {
-            const tbody = document.getElementById('admin-table-body');
-            const playerList = document.getElementById('top-players-list');
-            const popularityList = document.getElementById('slot-popularity-list');
-            
-            if (!tbody) return;
-            tbody.innerHTML = '';
-            playerList.innerHTML = '';
-            popularityList.innerHTML = '';
-            
-            let totalRevenue = 0;
-            const counts = {};
-            const slotPopularity = {};
-            const namesByPhone = {};
-
-            leadsData.forEach(l => {
-                totalRevenue += calculatePrice(l.date, l.time);
-                counts[l.phone] = (counts[l.phone] || 0) + 1;
-                slotPopularity[l.time] = (slotPopularity[l.time] || 0) + 1;
-                namesByPhone[l.phone] = l.captain;
-            });
-
-            const revEl = document.getElementById('stat-revenue');
-            const totEl = document.getElementById('stat-total');
-            const loyEl = document.getElementById('stat-loyalty');
-            const peakEl = document.getElementById('stat-peak');
-
-            if (revEl) revEl.innerText = `₹${totalRevenue.toLocaleString()}`;
-            if (totEl) totEl.innerText = leadsData.length;
-            
-            const repeatUsers = Object.values(counts).filter(v => v > 1).length;
-            const loyaltyPct = leadsData.length > 0 ? Math.round((repeatUsers / Object.keys(counts).length) * 100) : 0;
-            if (loyEl) loyEl.innerText = `${loyaltyPct}%`;
-
-            const peakSlot = Object.entries(slotPopularity).sort((a,b) => b[1] - a[1])[0]?.[0] || 'N/A';
-            if (peakEl) peakEl.innerText = peakSlot;
-
-            leadsData.sort((a,b) => new Date(b.date) - new Date(a.date)).forEach(lead => {
-                const isLoyal = counts[lead.phone] >= 3;
-                tbody.innerHTML += `
-                    <tr class="hover:bg-white/5 transition-colors">
-                        <td class="p-4 text-gray-300 text-[10px] md:text-[11px]">${lead.date}</td>
-                        <td class="p-4 font-black text-oxygen text-[10px] md:text-[11px]">${lead.time}</td>
-                        <td class="p-4 text-[10px] md:text-[11px]">${lead.captain}</td>
-                        <td class="p-4 text-[10px] md:text-[11px]">${lead.phone}</td>
-                        <td class="p-4 text-[10px] md:text-[11px]">${isLoyal ? '<span class="loyalty-badge">LOYALTY ACTIVE</span>' : '<span class="text-gray-700">REGULAR</span>'}</td>
-                    </tr>
-                `;
-            });
-
-            Object.entries(counts).sort((a,b) => b[1] - a[1]).slice(0, 5).forEach(([phone, count]) => {
-                playerList.innerHTML += `
-                    <div class="flex justify-between items-center border-b border-white/5 pb-2">
-                        <span class="font-bold uppercase tracking-tighter">${namesByPhone[phone] || 'User'} <br><span class="text-gray-600 text-[8px] tracking-widest">${phone}</span></span>
-                        <span class="text-oxygen font-black italic">${count} GAMES</span>
-                    </div>
-                `;
-            });
-
-            const maxPop = Math.max(...Object.values(slotPopularity), 1);
-            Object.entries(slotPopularity).sort((a,b) => b[1] - a[1]).slice(0, 4).forEach(([slot, count]) => {
-                const width = (count / maxPop) * 100;
-                popularityList.innerHTML += `
-                    <div>
-                        <div class="flex justify-between text-[8px] font-black uppercase mb-1">
-                            <span>Slot: ${slot}</span>
-                            <span>${count} Bookings</span>
-                        </div>
-                        <div class="h-1 bg-white/5 rounded-full">
-                            <div class="h-full bg-oxygen rounded-full shadow-[0_0_10px_#00ff88]" style="width: ${width}%"></div>
-                        </div>
-                    </div>
-                `;
-            });
-        }
-
-        document.getElementById('exportCsvBtn').onclick = () => {
-            let csv = "Date,Slot,Captain,Phone,EstRate\n";
-            leadsData.forEach(l => {
-                csv += `${l.date},${l.time},${l.captain},${l.phone},${calculatePrice(l.date, l.time)}\n`;
-            });
-            const blob = new Blob([csv], { type: 'text/csv' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.setAttribute('href', url);
-            a.setAttribute('download', `Oxygen_Data_2026.csv`);
-            a.click();
-        };
-
-        // Form Event Listeners
-        document.getElementById('booking_date').addEventListener('change', () => {
-            refreshSlotsUI();
-            const price = calculatePrice(document.getElementById('booking_date').value, document.getElementById('booking_time').value || '10:00');
-            document.getElementById('estimated-price').innerText = price > 0 ? `₹${price}` : '₹---';
-        });
-
-        document.getElementById('booking_time').addEventListener('change', () => {
-            const price = calculatePrice(document.getElementById('booking_date').value, document.getElementById('booking_time').value);
-            document.getElementById('estimated-price').innerText = `₹${price}`;
-        });
-
-        document.getElementById('bookingForm').addEventListener('submit', async (e) => {
+        document.getElementById('bookingForm').onsubmit = async (e) => {
             e.preventDefault();
-            if(!user) return;
             const btn = document.getElementById('submitBtn');
             const data = {
                 captain: document.getElementById('captain_name').value,
                 phone: document.getElementById('whatsapp_no').value,
                 date: document.getElementById('booking_date').value,
                 time: document.getElementById('booking_time').value,
-                userId: user.uid,
                 timestamp: serverTimestamp()
             };
             btn.disabled = true;
-            btn.textContent = "PROCESSING...";
-            
             try {
                 await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'leads'), data);
-                const msg = `OXYGEN BOOKING REQUEST (2026):\n\nCaptain: ${data.captain}\nDate: ${data.date}\nSlot: ${data.time}\nPhone: ${data.phone}\n\nPlease confirm availability for this slot.`;
-                const nums = ['918618038563', '918310885207', '916360367717'];
-                const target = nums[Math.floor(Math.random() * nums.length)];
-                window.open(`https://wa.me/${target}?text=${encodeURIComponent(msg)}`, '_blank');
-            } catch (err) { 
-                console.error(err); 
-            } finally { 
-                btn.disabled = false;
-                btn.textContent = "CONFIRM ON WHATSAPP";
-            }
-        });
+                const msg = `OXYGEN ARENA BOOKING:\nCaptain: ${data.captain}\nDate: ${data.date}\nSlot: ${data.time}`;
+                window.open(`https://wa.me/918618038563?text=${encodeURIComponent(msg)}`, '_blank');
+            } finally { btn.disabled = false; }
+        };
     </script>
 </body>
 </html>
