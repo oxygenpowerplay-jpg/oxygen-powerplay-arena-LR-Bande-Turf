@@ -9,9 +9,9 @@
     <style>
         @import url('[https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap](https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap)');
         :root { --primary-oxygen: #00ff88; --deep-space: #0a0e14; }
-        body { font-family: 'Poppins', sans-serif; background-color: var(--deep-space); color: white; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--deep-space); color: white; scroll-behavior: smooth; }
         .oxygen-text { color: var(--primary-oxygen); font-family: 'Orbitron', sans-serif; }
-        .hero-gradient { background: linear-gradient(rgba(10,14,20,0.8), rgba(10,14,20,0.98)), url('[https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80](https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80)'); background-size: cover; }
+        .hero-gradient { background: linear-gradient(rgba(10,14,20,0.8), rgba(10,14,20,0.98)), url('[https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80](https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1920&q=80)'); background-size: cover; background-position: center; }
         .glass-card { background: rgba(255,255,255,0.03); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); border-radius: 2rem; }
         .form-input { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white; padding: 12px; border-radius: 10px; width: 100%; outline: none; }
         .form-input:focus { border-color: var(--primary-oxygen); }
@@ -22,18 +22,18 @@
 
     <div id="admin-panel">
         <div class="max-w-4xl mx-auto">
-            <div class="flex justify-between items-center mb-8">
-                <h2 class="text-2xl font-black oxygen-text">BOOKING LOGS</h2>
-                <button onclick="document.getElementById('admin-panel').style.display='none'" class="text-white text-2xl">&times;</button>
+            <div class="flex justify-between items-center mb-8 border-b border-white/10 pb-4">
+                <h2 class="text-2xl font-black oxygen-text uppercase">BOOKING LOGS</h2>
+                <button onclick="document.getElementById('admin-panel').style.display='none'" class="text-white text-3xl hover:text-[#00ff88] transition-colors">&times;</button>
             </div>
             <div class="glass-card overflow-hidden">
                 <table class="w-full text-left text-xs">
-                    <thead class="bg-white/10 uppercase">
+                    <thead class="bg-white/10 uppercase font-bold">
                         <tr>
-                            <th class="p-4">Date</th>
-                            <th class="p-4">Slot</th>
-                            <th class="p-4">Captain</th>
-                            <th class="p-4">Phone</th>
+                            <th class="p-4 text-gray-400">Date</th>
+                            <th class="p-4 text-gray-400">Slot</th>
+                            <th class="p-4 text-gray-400">Captain</th>
+                            <th class="p-4 text-gray-400">Phone</th>
                         </tr>
                     </thead>
                     <tbody id="admin-table-body" class="divide-y divide-white/5"></tbody>
@@ -42,37 +42,47 @@
         </div>
     </div>
 
-    <header class="hero-gradient min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
-        <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter uppercase italic">OXYGEN <span class="oxygen-text">ARENA</span></h1>
-        <p class="text-gray-400 text-sm uppercase tracking-widest mb-8">Kaval Bairasandra, Bengaluru | 24/7 Open</p>
-        <a href="#booking" class="bg-[#00ff88] text-black px-10 py-4 rounded-full font-black uppercase text-xs">Book Slot Now</a>
+    <header class="hero-gradient min-h-[70vh] flex flex-col items-center justify-center text-center px-4">
+        <div class="mb-4">
+             <span class="bg-red-600 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest">2026 Season</span>
+        </div>
+        <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter uppercase italic leading-none">OXYGEN <span class="oxygen-text">ARENA</span></h1>
+        <p class="text-gray-400 text-sm uppercase tracking-widest mb-8">Kaval Bairasandra, Bengaluru | 24/7 Professional Turf</p>
+        <div class="flex gap-4">
+            <a href="#booking" class="bg-[#00ff88] text-black px-10 py-4 rounded-full font-black uppercase text-xs hover:scale-105 transition-transform">Book Slot Now</a>
+            <a href="[https://maps.app.goo.gl/354vU6Lz6vT8oT8s8](https://maps.app.goo.gl/354vU6Lz6vT8oT8s8)" target="_blank" class="bg-white/10 text-white px-8 py-4 rounded-full font-bold uppercase text-xs hover:bg-white/20 transition-all">Location</a>
+        </div>
     </header>
 
     <section id="booking" class="py-20 px-6">
         <div class="max-w-xl mx-auto glass-card p-8 md:p-12">
-            <h2 class="text-3xl font-black oxygen-text text-center mb-8 italic">RESERVE TURF</h2>
+            <h2 class="text-3xl font-black oxygen-text text-center mb-2 italic uppercase">Reserve Turf</h2>
+            <p class="text-center text-[10px] text-gray-500 uppercase tracking-widest mb-10">Instant WhatsApp Confirmation</p>
             <form id="bookingForm" class="space-y-4">
                 <input type="text" id="captain_name" required class="form-input" placeholder="Team Captain Name">
-                <input type="tel" id="whatsapp_no" required class="form-input" placeholder="WhatsApp Number" pattern="[0-9]{10}">
+                <input type="tel" id="whatsapp_no" required class="form-input" placeholder="WhatsApp Number (10 Digits)" pattern="[0-9]{10}">
                 <div class="grid grid-cols-2 gap-4">
                     <input type="date" id="booking_date" required class="form-input">
                     <select id="booking_time" required class="form-input">
-                        <option value="" disabled selected>Select Time</option>
-                        <option value="17:00">05:00 PM</option>
-                        <option value="18:00">06:00 PM</option>
-                        <option value="19:00">07:00 PM</option>
-                        <option value="20:00">08:00 PM</option>
-                        <option value="21:00">09:00 PM</option>
-                        <option value="22:00">10:00 PM</option>
+                        <option value="" disabled selected>Select Slot</option>
+                        <option value="06:00 AM">06:00 AM - 07:00 AM</option>
+                        <option value="05:00 PM">05:00 PM - 06:00 PM</option>
+                        <option value="06:00 PM">06:00 PM - 07:00 PM</option>
+                        <option value="07:00 PM">07:00 PM - 08:00 PM</option>
+                        <option value="08:00 PM">08:00 PM - 09:00 PM</option>
+                        <option value="09:00 PM">09:00 PM - 10:00 PM</option>
+                        <option value="10:00 PM">10:00 PM - 11:00 PM</option>
+                        <option value="11:00 PM">11:00 PM - 12:00 AM</option>
                     </select>
                 </div>
-                <button type="submit" id="submitBtn" class="w-full bg-[#00ff88] text-black font-black py-5 rounded-xl uppercase text-sm mt-4">Confirm via WhatsApp</button>
+                <button type="submit" id="submitBtn" class="w-full bg-[#00ff88] text-black font-black py-5 rounded-xl uppercase text-sm mt-4 hover:shadow-[0_0_20px_rgba(0,255,136,0.4)] transition-all">Confirm via WhatsApp</button>
             </form>
         </div>
     </section>
 
     <footer class="py-10 text-center border-t border-white/5">
-        <button onclick="document.getElementById('admin-panel').style.display='block'" class="text-[10px] text-gray-700 uppercase tracking-widest hover:text-white">Admin Dashboard</button>
+        <p class="text-[10px] text-gray-600 uppercase tracking-widest mb-4">© 2026 Oxygen Powerplay Arena Bengaluru</p>
+        <button onclick="document.getElementById('admin-panel').style.display='block'" class="text-[10px] text-gray-800 uppercase tracking-widest hover:text-white transition-colors">Admin Dashboard</button>
     </footer>
 
     <script type="module">
@@ -101,9 +111,11 @@
                     const tbody = document.getElementById('admin-table-body');
                     if(!tbody) return;
                     tbody.innerHTML = '';
-                    snap.docs.forEach(doc => {
-                        const d = doc.data();
-                        tbody.innerHTML += `<tr><td class="p-4">${d.date}</td><td class="p-4 text-[#00ff88]">${d.time}</td><td class="p-4">${d.captain}</td><td class="p-4">${d.phone}</td></tr>`;
+                    const sortedDocs = snap.docs.map(doc => doc.data())
+                                           .sort((a,b) => (b.timestamp?.seconds || 0) - (a.timestamp?.seconds || 0));
+                    
+                    sortedDocs.forEach(d => {
+                        tbody.innerHTML += `<tr><td class="p-4 font-medium">${d.date}</td><td class="p-4 text-[#00ff88] font-bold">${d.time}</td><td class="p-4">${d.captain}</td><td class="p-4 text-gray-400">${d.phone}</td></tr>`;
                     });
                 });
             } else {
@@ -122,11 +134,19 @@
                 timestamp: serverTimestamp()
             };
             btn.disabled = true;
+            btn.innerText = "Processing...";
             try {
                 await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'leads'), data);
-                const msg = `OXYGEN ARENA BOOKING:\nCaptain: ${data.captain}\nDate: ${data.date}\nSlot: ${data.time}`;
+                const msg = `*OXYGEN ARENA BOOKING REQUEST*\n\n*Captain:* ${data.captain}\n*Date:* ${data.date}\n*Slot:* ${data.time}\n*Phone:* ${data.phone}\n\n_Please confirm availability._`;
                 window.open(`https://wa.me/918618038563?text=${encodeURIComponent(msg)}`, '_blank');
-            } finally { btn.disabled = false; }
+                document.getElementById('bookingForm').reset();
+            } catch (err) {
+                console.error(err);
+                alert("Submission failed. Check your internet or Firebase rules.");
+            } finally { 
+                btn.disabled = false; 
+                btn.innerText = "Confirm via WhatsApp";
+            }
         };
     </script>
 </body>
