@@ -1,3 +1,67 @@
+Firebase Setup for Oxygen Powerplay Arena
+
+Follow these steps to set up your database and booking system from scratch.
+
+1. Create the Project
+
+Go to the Firebase Console.
+
+Click Add Project.
+
+Name it: Oxygen-Arena-Portal.
+
+Disable Google Analytics (optional, for faster setup) and click Create.
+
+2. Set Up Database (Firestore)
+
+In the left menu, click Firestore Database.
+
+Click Create Database.
+
+Choose Start in test mode (we will secure it later).
+
+Select a location closest to you (e.g., asia-south1 for Mumbai/Bengaluru).
+
+Click Enable.
+
+3. Set Up Authentication (CRITICAL)
+
+If this is not done, your data will not save!
+
+Click Authentication in the left menu.
+
+Click Get Started.
+
+Go to the Sign-in method tab.
+
+Click Add new provider and select Anonymous. Toggle it to Enabled and click Save.
+
+Click the Settings tab at the top.
+
+Click Authorized Domains in the left sidebar.
+
+Click Add Domain and enter: oxygenpowerplayarena.in.
+
+4. Security Rule (Mandatory)
+
+Go to Firestore Database > Rules tab and paste this exactly. Check that you don't have extra spaces or dots.
+
+Note: You must look for data in the collection path: artifacts/oxygen-powerplay-2026/public/data/leads.
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /artifacts/oxygen-powerplay-2026/{document=**} {
+      allow read, write: if true;
+    }
+  }
+}
+
+
+5. Final GitHub Code (index.html)
+
+Copy this entire block and replace everything in your index.html file on GitHub. This version uses 8618038563 as the primary contact.
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +121,7 @@
     <section id="booking" class="py-20 px-6">
         <div class="max-w-xl mx-auto glass-card p-8 md:p-12">
             <h2 class="text-3xl font-black oxygen-text text-center mb-2 italic uppercase">Reserve Turf</h2>
-            <p class="text-center text-[10px] text-gray-500 uppercase tracking-widest mb-10">Instant WhatsApp Confirmation</p>
+            <p class="text-center text-[10px] text-gray-500 uppercase tracking-widest mb-10">Instant Notification to Management</p>
             <form id="bookingForm" class="space-y-4">
                 <input type="text" id="captain_name" required class="form-input" placeholder="Team Captain Name">
                 <input type="tel" id="whatsapp_no" required class="form-input" placeholder="WhatsApp Number (10 Digits)" pattern="[0-9]{10}">
@@ -75,7 +139,7 @@
                         <option value="11:00 PM">11:00 PM - 12:00 AM</option>
                     </select>
                 </div>
-                <button type="submit" id="submitBtn" class="w-full bg-[#00ff88] text-black font-black py-5 rounded-xl uppercase text-sm mt-4 hover:shadow-[0_0_20px_rgba(0,255,136,0.4)] transition-all">Confirm via WhatsApp</button>
+                <button type="submit" id="submitBtn" class="w-full bg-[#00ff88] text-black font-black py-5 rounded-xl uppercase text-sm mt-4 hover:shadow-[0_0_20px_rgba(0,255,136,0.4)] transition-all">Confirm Booking</button>
             </form>
         </div>
     </section>
@@ -104,6 +168,9 @@
         const db = getFirestore(app);
         const appId = 'oxygen-powerplay-2026';
 
+        // Management Numbers (Primary is first)
+        const managementNumbers = ["918618038563", "919036783856", "918095166373"];
+
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 const leadsRef = collection(db, 'artifacts', appId, 'public', 'data', 'leads');
@@ -130,22 +197,29 @@
                 captain: document.getElementById('captain_name').value,
                 phone: document.getElementById('whatsapp_no').value,
                 date: document.getElementById('booking_date').value,
-                time: document.getElementById('booking_time').value,
+                time: document.getElementById8('booking_time').value,
                 timestamp: serverTimestamp()
             };
             btn.disabled = true;
             btn.innerText = "Processing...";
             try {
+                if (!auth.currentUser) await signInAnonymously(auth);
+                
                 await addDoc(collection(db, 'artifacts', appId, 'public', 'data', 'leads'), data);
-                const msg = `*OXYGEN ARENA BOOKING REQUEST*\n\n*Captain:* ${data.captain}\n*Date:* ${data.date}\n*Slot:* ${data.time}\n*Phone:* ${data.phone}\n\n_Please confirm availability._`;
-                window.open(`https://wa.me/918618038563?text=${encodeURIComponent(msg)}`, '_blank');
+                
+                const msg = `*OXYGEN ARENA BOOKING REQUEST*\n\n*Captain:* ${data.captain}\n*Date:* ${data.date}\n*Slot:* ${data.time}\n*Phone:* ${data.phone}`;
+                
+                // Open primary number (8618038563)
+                window.open(`https://wa.me/${managementNumbers[0]}?text=${encodeURIComponent(msg)}`, '_blank');
+                
+                alert("Enquiry sent to primary management (8618038563). Please share with other admins if required.");
                 document.getElementById('bookingForm').reset();
             } catch (err) {
                 console.error(err);
-                alert("Submission failed. Check your internet or Firebase rules.");
+                alert("Error: " + err.message);
             } finally { 
                 btn.disabled = false; 
-                btn.innerText = "Confirm via WhatsApp";
+                btn.innerText = "Confirm Booking";
             }
         };
     </script>
